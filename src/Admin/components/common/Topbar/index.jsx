@@ -11,21 +11,20 @@ import { IoMenuOutline } from "react-icons/io5";
 import style from "./topbar.css";
 const Topbar = (props) => {
   const [actname, setActive] = useState(props.match.path);
-  const [menuVisible, setMenuVisible] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggle = () => setDropdownOpen((prevState) => !prevState);
 
-  var navbar = document.getElementById("navbar");
-  var component = document.getElementById("component__div");
-  console.log("navbar--", navbar);
-  if (menuVisible) {
+  const manageMobileView = () => {
+    var navbar = document.getElementById("navbar");
+    var component = document.getElementById("component__div");
     navbar.classList.remove("d-navbar");
     component.classList.add("component__div");
-  }
+  };
+
   return (
     <div className="topbar__container shadow">
       <div className="topbar__app__name">Food Ordering App</div>
-      <div className="menu__bar" onClick={() => setMenuVisible(!menuVisible)}>
+      <div className="menu__bar" onClick={() => manageMobileView()}>
         <IoMenuOutline className="menu__icon" />
       </div>
       <div className="topbar__logo__dropdown">

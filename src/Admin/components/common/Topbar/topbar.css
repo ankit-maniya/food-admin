@@ -71,6 +71,10 @@
 /*========== MOBILE VIEW CSS FOR TOPBAR & NAVBAR ==========*/
 @media screen and (max-width: 768px) {
   /* Menubar display */
+  .tobar__fluid__container {
+    padding: 0;
+  }
+
   .topbar__app__name {
     display: none;
   }

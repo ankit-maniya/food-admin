@@ -4,6 +4,7 @@ import classNames from "classnames/bind";
 import {
   IoBagCheckOutline,
   IoChatbubblesOutline,
+  IoCloseCircleOutline,
   IoFastFoodOutline,
   IoGridOutline,
   IoHomeOutline,
@@ -24,6 +25,13 @@ const Navbar = (props) => {
     expander: nav,
   });
 
+  const manageMobileView = () => {
+    var navbar = document.getElementById("navbar");
+    var component = document.getElementById("component__div");
+    navbar.classList.add("d-navbar");
+    component.classList.remove("component__div");
+  };
+
   return (
     <div className="nav__div">
       <div className={left_Navbar} id="navbar" name="navbar">
@@ -40,6 +48,13 @@ const Navbar = (props) => {
               <Link to="/" className="nav__logo">
                 Spiffy
               </Link>
+
+              <div
+                className="nav__close__icon__container"
+                onClick={() => manageMobileView()}
+              >
+                <IoCloseCircleOutline className="nav__close__icon" />
+              </div>
             </div>
             <div className="nav__list">
               <Link

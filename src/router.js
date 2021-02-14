@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route, Link, Redirect } from "react-router-dom";
+ import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 import Navbar from "./Admin/components/common/Navbar";
 import Topbar from "./Admin/components/common/Topbar";
 import Dashboard from "./Admin/components/Dashboard";
@@ -42,6 +44,7 @@ const AppRouter = () => {
         />
       </Switch>
     </BrowserRouter>
+    <ToastContainer/>
     </>
   );
 };
@@ -75,7 +78,7 @@ const ProtectedRoute = ({ component: Component, me, ...rest }) => {
               </div>
               <div className="col-12 col-sm-12 col-md-9 col-lg-10 topbar__div" id="component__div">
                 {/* load -> first Topbar */}
-                <div className="container-fluid"> 
+                <div className="container-fluid tobar__fluid__container"> 
                   <Topbar />
                 </div>
                 {/* load -> Called Component */}
