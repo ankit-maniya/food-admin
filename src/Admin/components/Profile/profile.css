@@ -1,0 +1,22 @@
+.profile__form {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.profile__image__edit {
+  border: 5px solid var(--first-color);
+  border-radius: 50%;
+}
+
+/* BUTTONS */
+.btn-primary-new {
+  background-color: var(--btn-primary);
+  color: var(--white-color);
+  font-weight: bold;
+}
+
+.btn-primary-new:hover {
+  background-color: var(--first-color-dark);
+  color: var(--white-color);
+}

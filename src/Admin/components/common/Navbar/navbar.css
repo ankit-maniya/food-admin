@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+/*========== LEFT-NAV ==========*/
+.l-navbar {
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--nav-width);*/
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--white-color);
+  padding: 1.5rem 1.5rem 2rem;
+  transition: 0.5s;
+  z-index: var(--z-fixed);
+}
+
+/*========== NAV ==========*/
+.nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.nav__brand {
+  /* display: grid; */
+  /* grid-template-columns: max-content max-content; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.nav__toggle {
+  font-size: 1.25rem;
+  margin: 0.75rem;
+  cursor: pointer;
+}
+
+.nav__logo {
+  color: var(--white-color);
+  font-family: "Courgette";
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.nav__logo:hover {
+  color: var(--first-color);
+  text-decoration: none;
+}
+
+.nav__link {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  padding: 0.75rem;
+  column-gap: 0.75rem;
+  color: var(--white-color);
+  border-radius: 0.5rem;
+  margin-bottom: 0.4rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.nav__link:hover {
+  background-color: var(--first-color);
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.nav__icons {
+  font-size: 1.25rem;
+}
+
+.nav__name {
+  font-size: var(--small-font-size);
+}
+
+/*========== EXPANDERMENU ==========*/
+.expander {
+  width: calc(var(--nav-width)+12.25rem);
+}
+
+/*========== BODY PADDING ==========*/
+.nav__div {
+  padding: 0;
+}
+
+/*========== ACTIVE LINK MENU ==========*/
+.active {
+  background-color: var(--first-color);
+}
+
+/* ===================TABLET VIEW ================ */
+@media (min-width: 992px) {
+  .l-navbar {
+    padding: 1.5rem 0.5rem 2rem;
+  }
+}
+
+/*================= MOBILE VIEW ===============*/
+
+@media screen and (max-width: 767px) {
+  .d-navbar {
+    display: none;
+  }
+}
