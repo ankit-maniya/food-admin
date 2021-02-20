@@ -54,7 +54,7 @@ const Topbar = (props) => {
                 Profile
               </DropdownItem>
             </Link>
-            <Link className="dropdown__link" to="/logout">
+            <Link className="dropdown__link" to="/">
               <DropdownItem>Logout</DropdownItem>
             </Link>
           </DropdownMenu>

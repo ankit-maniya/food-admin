@@ -14,9 +14,27 @@
   background-color: var(--btn-primary);
   color: var(--white-color);
   font-weight: bold;
+  border-color: var(--btn-primary);
 }
 
 .btn-primary-new:hover {
   background-color: var(--first-color-dark);
   color: var(--white-color);
+  border-color: var(--first-color-dark);
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: var(--first-color-dark);
+  border-color: var(--first-color-dark);
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+  color: #fff;
+  background-color: var(--first-color-dark);
+  border-color: var(--first-color-dark);
+  box-shadow: 0 0 0 0.2rem rgb(255 38 68 / 50%);
 }

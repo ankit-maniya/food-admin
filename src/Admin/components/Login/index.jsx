@@ -10,9 +10,10 @@ import {
 } from "reactstrap";
 import "./login.css";
 
-const Login = () => {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+const Login = (props) => {
+  const [email, setEmail] = useState("demo@gmail.com");
+  const [password, setPassword] = useState("123456");
+  const { history } = props;
 
   console.log(email, password);
 
@@ -34,6 +35,10 @@ const Login = () => {
       passwordBox.classList.add("is-valid");
       passwordBox.classList.remove("is-invalid");
     }
+
+    if (email && password) {
+      history.push("/dashboard");
+    }
   };
 
   return (
@@ -48,6 +53,7 @@ const Login = () => {
                 type="email"
                 id="email"
                 placeholder="Enter Email"
+                value={email}
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
@@ -61,6 +67,7 @@ const Login = () => {
                 type="password"
                 id="password"
                 placeholder="Enter Password"
+                value={password}
                 onChange={(e) => {
                   setPassword(e.target.value);
                 }}

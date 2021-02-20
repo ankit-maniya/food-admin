@@ -33,10 +33,10 @@ const Navbar = (props) => {
   };
 
   return (
-    <div className="nav__div">
+    <div className="nav__div h-100">
       <div className={left_Navbar} id="navbar" name="navbar">
         <nav className="nav">
-          <div>
+          <div className="nav__container">
             <div className="nav__brand">
               {/* <IoGridOutline
                 className="nav__toggle"
@@ -73,7 +73,9 @@ const Navbar = (props) => {
               <Link
                 to="/orders"
                 className={
-                  actname === `/orders` ? `nav__link active` : `nav__link`
+                  actname === `/orders` || actname === `/ordersdetails/:id`
+                    ? `nav__link active`
+                    : `nav__link`
                 }
                 onClick={() => {
                   setActName("/orders");
@@ -84,7 +86,7 @@ const Navbar = (props) => {
               </Link>
 
               <Link
-                to="/menus"
+                to="/menu"
                 className={
                   actname === `Menu` ? `nav__link active` : `nav__link`
                 }
@@ -137,7 +139,7 @@ const Navbar = (props) => {
             </div>
           </div>
 
-          <Link to="/logout" className="nav__link">
+          <Link to="/logout" className="nav__link mb-4">
             <IoLogOutOutline className="nav__icons" />
             <span className="nav__name">Logouts</span>
           </Link>

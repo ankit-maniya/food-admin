@@ -24,24 +24,54 @@
   background-color: var(--card-yellow);
 }
 
+.dashboard__container .card__1:hover {
+  background-color: var(--white-color);
+  color: var(--card-yellow);
+}
+
 .dashboard__container .card__2 {
   background-color: var(--card-red);
+}
+
+.dashboard__container .card__2:hover {
+  background-color: var(--white-color);
+  color: var(--card-red);
 }
 
 .dashboard__container .card__3 {
   background-color: var(--card-green);
 }
 
+.dashboard__container .card__3:hover {
+  background-color: var(--white-color);
+  color: var(--card-green);
+}
+
 .dashboard__container .card__4 {
   background-color: var(--card-purple);
+}
+
+.dashboard__container .card__4:hover {
+  background-color: var(--white-color);
+  color: var(--card-purple);
 }
 
 .dashboard__container .card__5 {
   background-color: var(--card-darkblue);
 }
 
+.dashboard__container .card__5:hover {
+  background-color: var(--white-color);
+  color: var(--card-darkblue);
+}
+
 .dashboard__container .card__6 {
   background-color: var(--card-lightblue);
+}
+
+.dashboard__container .card__6:hover {
+  background-color: var(--white-color);
+  color: var(--card-lightblue);
 }
 
 .dashboard__card__image {
@@ -55,35 +85,65 @@
 
 .dashboard__card .card__imgage {
   font-size: 3rem;
-  transition: all 0.5s;
+  transition: all 0.1s;
 }
 
-.dashboard__card .card__imgage:hover {
+.dashboard__card:hover .card__imgage {
   transform: rotate(45deg);
 }
 
-.dashboard__card .card__icon__1 {
+.dashboard__card .card__icon__container__1 {
   color: var(--card-yellow);
 }
 
-.dashboard__card .card__icon__2 {
+.dashboard__card:hover .card__icon__container__1 {
+  color: var(--white-color);
+  background-color: var(--card-yellow);
+}
+
+.dashboard__card .card__icon__container__2 {
   color: var(--card-red);
 }
 
-.dashboard__card .card__icon__3 {
+.dashboard__card:hover .card__icon__container__2 {
+  color: var(--white-color);
+  background-color: var(--card-red);
+}
+
+.dashboard__card .card__icon__container__3 {
   color: var(--card-green);
 }
 
-.dashboard__card .card__icon__4 {
+.dashboard__card:hover .card__icon__container__3 {
+  color: var(--white-color);
+  background-color: var(--card-green);
+}
+
+.dashboard__card .card__icon__container__4 {
   color: var(--card-purple);
 }
 
-.dashboard__card .card__icon__5 {
+.dashboard__card:hover .card__icon__container__4 {
+  color: var(--white-color);
+  background-color: var(--card-purple);
+}
+
+.dashboard__card .card__icon__container__5 {
   color: var(--card-darkblue);
 }
 
-.dashboard__card .card__icon__6 {
+.dashboard__card:hover .card__icon__container__5 {
+  color: var(--white-color);
+  background-color: var(--card-darkblue);
+}
+
+.dashboard__card .card__icon__container__6 {
   color: var(--card-lightblue);
+}
+
+.dashboard__card:hover .card__icon__container__6 {
+  color: var(--white-color);
+  background-color: var(--card-lightblue);
 }
 
 .dashboard__card__information .dashboard__card__type {
