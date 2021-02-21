@@ -72,7 +72,7 @@
 .active {
   color: #fff;
   text-decoration: none;
-  background-color: #e91e63;
+  background-color: var(--first-color);
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.18) !important;
 }
 

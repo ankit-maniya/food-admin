@@ -10,7 +10,9 @@ import Login from "./Admin/components/Login";
 import Orders from "./Admin/components/Orders"
 import Profile from "./Admin/components/Profile"
 import Menu from "./Admin/components/Menu";
+import Category from "./Admin/components/Category";
 import OrderDetails from "./Admin/components/Orders/orderDetails";
+import CategoryEdit from "./Admin/components/Category/CategoryEdit";
 
 const me = () => {
   let me = localStorage.getItem("me");
@@ -55,7 +57,35 @@ const AppRouter = () => {
         <ProtectedRoute
           exact
           me={me()}
+          path="/category"
+          component={Category}
+        />
+
+         <ProtectedRoute
+          exact
+          me={me()}
+          path="/category/:cat_Id"
+          component={CategoryEdit}
+        />
+
+        <ProtectedRoute
+          exact
+          me={me()}
+          path="/category/menu/:cat_Id"
+          component={Menu}
+        />
+
+        <ProtectedRoute
+          exact
+          me={me()}
           path="/menu"
+          component={Menu}
+        />
+
+         <ProtectedRoute
+          exact
+          me={me()}
+          path="/menu/:menu_Id"
           component={Menu}
         />
       </Switch>

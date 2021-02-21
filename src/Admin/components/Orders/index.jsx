@@ -10,7 +10,7 @@ const Orders = (props) => {
     <div className="row m-0 mt-3">
       <div className="col-12 col-sm-12 col-md-12 col-lg-12">
         <div className="row ">
-          <div className="col-12 col-md-6 col-lg-6 d-flex mt-1">
+          <div className="col-12 col-md-6 col-lg-6 d-flex mt-1 mb-1">
             <Input
               type="email"
               name="email"
@@ -19,13 +19,13 @@ const Orders = (props) => {
               className="input__search"
             />
             <span
-              className="primary btn-primary-new "
+              className="primary btn-primary-new"
               onClick={() => alert("Search Keyword")}
             >
               <IoSearchCircleOutline className="search__icon" />
             </span>
           </div>
-          <div className="col-12 col-md-6 col-lg-6 text-center mt-1">
+          <div className="col-12 col-md-6 col-lg-6 text-center mt-1 mb-1">
             <Button
               className=""
               color="primary btn-primary-new"

@@ -9,6 +9,7 @@ import {
   FormText,
 } from "reactstrap";
 import "./login.css";
+import { toast } from "react-toastify";
 
 const Login = (props) => {
   const [email, setEmail] = useState("demo@gmail.com");
@@ -37,7 +38,10 @@ const Login = (props) => {
     }
 
     if (email && password) {
+      toast.success("Login Successfully!");
       history.push("/dashboard");
+    } else {
+      toast.warning("Please fillup All Details!");
     }
   };
 

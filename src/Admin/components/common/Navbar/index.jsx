@@ -5,6 +5,7 @@ import {
   IoBagCheckOutline,
   IoChatbubblesOutline,
   IoCloseCircleOutline,
+  IoDocumentTextOutline,
   IoFastFoodOutline,
   IoGridOutline,
   IoHomeOutline,
@@ -86,16 +87,22 @@ const Navbar = (props) => {
               </Link>
 
               <Link
-                to="/menu"
+                to="/category"
                 className={
-                  actname === `Menu` ? `nav__link active` : `nav__link`
+                  actname === `/category` ||
+                  actname === `/category/:cat_Id` ||
+                  actname === `/category/menu/:cat_Id` ||
+                  actname === `/menu` ||
+                  actname === `/menu/:menu_Id`
+                    ? `nav__link  active`
+                    : `nav__link `
                 }
                 onClick={() => {
-                  setActName("Menu");
+                  setActName("/category");
                 }}
               >
-                <IoFastFoodOutline className="nav__icons" />
-                <span className="nav__name">Menu</span>
+                <IoDocumentTextOutline className="nav__icons" />
+                <span className="nav__name">Category</span>
               </Link>
 
               <Link
